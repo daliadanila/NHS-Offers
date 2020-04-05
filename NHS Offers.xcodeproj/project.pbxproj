@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2BC81667243A4F39006E8AD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */; };
+		2BC81669243A53DD006E8AD4 /* OfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC81668243A53DD006E8AD4 /* OfferRowView.swift */; };
+		2BC8166C243A555A006E8AD4 /* ImageStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC8166B243A555A006E8AD4 /* ImageStore.swift */; };
+		2BD0BF14243A5E78003E78F9 /* OfferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0BF13243A5E78003E78F9 /* OfferListView.swift */; };
 		2BDFE5EA2439E95500FB574B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE5E92439E95500FB574B /* AppDelegate.swift */; };
 		2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE5EB2439E95500FB574B /* SceneDelegate.swift */; };
 		2BDFE5EE2439E95500FB574B /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE5ED2439E95500FB574B /* ContentView.swift */; };
@@ -19,9 +23,15 @@
 		2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */; };
 		2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6062439F6FB00FB574B /* IconView.swift */; };
 		2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6082439F7DC00FB574B /* NameOverlay.swift */; };
+		2BDFE60F243A47C000FB574B /* OfferRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */; };
+		312D21CA3E8963D8EAE0F6BD /* Pods_NHS_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2BC81668243A53DD006E8AD4 /* OfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRowView.swift; sourceTree = "<group>"; };
+		2BC8166B243A555A006E8AD4 /* ImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageStore.swift; sourceTree = "<group>"; };
+		2BD0BF13243A5E78003E78F9 /* OfferListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListView.swift; sourceTree = "<group>"; };
 		2BDFE5E62439E95500FB574B /* NHS Offers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "NHS Offers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2BDFE5E92439E95500FB574B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2BDFE5EB2439E95500FB574B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -36,6 +46,10 @@
 		2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverlay.swift; sourceTree = "<group>"; };
 		2BDFE6062439F6FB00FB574B /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		2BDFE6082439F7DC00FB574B /* NameOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOverlay.swift; sourceTree = "<group>"; };
+		2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRowViewModel.swift; sourceTree = "<group>"; };
+		86F1DECD766898528FA6D531 /* Pods-NHS Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.debug.xcconfig"; sourceTree = "<group>"; };
+		BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHS_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		EB7850A1CE0E528FC3F34A53 /* Pods-NHS Offers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				312D21CA3E8963D8EAE0F6BD /* Pods_NHS_Offers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0E71D89C2144A579FE41C941 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				86F1DECD766898528FA6D531 /* Pods-NHS Offers.debug.xcconfig */,
+				EB7850A1CE0E528FC3F34A53 /* Pods-NHS Offers.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		2BC8166A243A5548006E8AD4 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2BC8166B243A555A006E8AD4 /* ImageStore.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2BDFE5DD2439E95500FB574B = {
 			isa = PBXGroup;
 			children = (
 				2BDFE5E82439E95500FB574B /* NHS Offers */,
 				2BDFE5E72439E95500FB574B /* Products */,
+				0E71D89C2144A579FE41C941 /* Pods */,
+				F0576C6265B369981663CE64 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -68,12 +102,15 @@
 		2BDFE5E82439E95500FB574B /* NHS Offers */ = {
 			isa = PBXGroup;
 			children = (
+				2BC8166A243A5548006E8AD4 /* Helpers */,
 				2BDFE60A243A21C100FB574B /* Views */,
 				2BDFE5FE2439EF6F00FB574B /* CategoryViewModel.swift */,
+				2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */,
 				2BDFE5E92439E95500FB574B /* AppDelegate.swift */,
 				2BDFE5EB2439E95500FB574B /* SceneDelegate.swift */,
 				2BDFE5EF2439E95600FB574B /* Assets.xcassets */,
 				2BDFE5F42439E95600FB574B /* LaunchScreen.storyboard */,
+				2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */,
 				2BDFE5F72439E95600FB574B /* Info.plist */,
 				2BDFE5F12439E95600FB574B /* Preview Content */,
 				2BDFE6002439F00A00FB574B /* TestData.swift */,
@@ -92,13 +129,39 @@
 		2BDFE60A243A21C100FB574B /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */,
+				2BDFE60B243A476400FB574B /* Categories */,
+				2BDFE60C243A477600FB574B /* Offers */,
 				2BDFE5ED2439E95500FB574B /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		2BDFE60B243A476400FB574B /* Categories */ = {
+			isa = PBXGroup;
+			children = (
+				2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */,
 				2BDFE6022439F4FB00FB574B /* CategoryView.swift */,
 				2BDFE6062439F6FB00FB574B /* IconView.swift */,
 				2BDFE6082439F7DC00FB574B /* NameOverlay.swift */,
 			);
-			path = Views;
+			path = Categories;
+			sourceTree = "<group>";
+		};
+		2BDFE60C243A477600FB574B /* Offers */ = {
+			isa = PBXGroup;
+			children = (
+				2BC81668243A53DD006E8AD4 /* OfferRowView.swift */,
+				2BD0BF13243A5E78003E78F9 /* OfferListView.swift */,
+			);
+			path = Offers;
+			sourceTree = "<group>";
+		};
+		F0576C6265B369981663CE64 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,9 +171,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2BDFE5FA2439E95600FB574B /* Build configuration list for PBXNativeTarget "NHS Offers" */;
 			buildPhases = (
+				4385E6685E2F38C94AE7DE93 /* [CP] Check Pods Manifest.lock */,
 				2BDFE5E22439E95500FB574B /* Sources */,
 				2BDFE5E32439E95500FB574B /* Frameworks */,
 				2BDFE5E42439E95500FB574B /* Resources */,
+				CE036317779F5DDA13F07188 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -160,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2BDFE5F62439E95600FB574B /* LaunchScreen.storyboard in Resources */,
+				2BC81667243A4F39006E8AD4 /* GoogleService-Info.plist in Resources */,
 				2BDFE5F32439E95600FB574B /* Preview Assets.xcassets in Resources */,
 				2BDFE5F02439E95600FB574B /* Assets.xcassets in Resources */,
 			);
@@ -167,20 +233,62 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		4385E6685E2F38C94AE7DE93 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-NHS Offers-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE036317779F5DDA13F07188 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHS Offers/Pods-NHS Offers-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-NHS Offers/Pods-NHS Offers-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NHS Offers/Pods-NHS Offers-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2BDFE5E22439E95500FB574B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2BC81669243A53DD006E8AD4 /* OfferRowView.swift in Sources */,
 				2BDFE5FF2439EF6F00FB574B /* CategoryViewModel.swift in Sources */,
+				2BD0BF14243A5E78003E78F9 /* OfferListView.swift in Sources */,
 				2BDFE5EA2439E95500FB574B /* AppDelegate.swift in Sources */,
 				2BDFE6032439F4FB00FB574B /* CategoryView.swift in Sources */,
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
+				2BDFE60F243A47C000FB574B /* OfferRowViewModel.swift in Sources */,
 				2BDFE6012439F00A00FB574B /* TestData.swift in Sources */,
 				2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */,
 				2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */,
 				2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */,
 				2BDFE5EE2439E95500FB574B /* ContentView.swift in Sources */,
+				2BC8166C243A555A006E8AD4 /* ImageStore.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -314,6 +422,7 @@
 		};
 		2BDFE5FB2439E95600FB574B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 86F1DECD766898528FA6D531 /* Pods-NHS Offers.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -334,6 +443,7 @@
 		};
 		2BDFE5FC2439E95600FB574B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EB7850A1CE0E528FC3F34A53 /* Pods-NHS Offers.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

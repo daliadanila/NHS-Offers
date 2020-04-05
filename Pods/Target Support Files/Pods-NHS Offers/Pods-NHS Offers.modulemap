@@ -1,0 +1,6 @@
+framework module Pods_NHS_Offers {
+  umbrella header "Pods-NHS Offers-umbrella.h"
+
+  export *
+  module * { export * }
+}

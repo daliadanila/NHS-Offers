@@ -7,14 +7,30 @@
 //
 
 import UIKit
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+
+//        FirebaseApp.configure()
+//
+//        let db = Firestore.firestore()
+//
+//        let docRef = db.collection("nhs").document("offers")
+//
+//        docRef.getDocument { (document, error) in
+//            if let document = document, document.exists {
+//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
+//                print("Document data: \(dataDescription)")
+//
+//            } else {
+//                print("Document does not exist")
+//            }
+//        }
+        
         return true
     }
 
