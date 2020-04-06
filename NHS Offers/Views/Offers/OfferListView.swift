@@ -15,7 +15,9 @@ struct OfferListView: View {
     var body: some View {
         
         List(filteredOffers, id: \.id) { offer in
-            OfferRowView(offer: offer)
+            NavigationLink(destination: OfferDetailsView()) {
+                OfferRowView(offer: offer)
+            }
         }
         
     }
