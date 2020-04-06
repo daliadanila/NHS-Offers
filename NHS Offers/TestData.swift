@@ -12,11 +12,11 @@ struct TestData {
     
     static func offerCategories() -> [CategoryViewModel] {
         
-        let cat1 = CategoryViewModel(name: "All Offers", icon: "offer", color: UIColor(rgb: 0x003459))//UIColor.systemBlue)
-        let cat2 = CategoryViewModel(name: "Food Offers", icon: "food", color: UIColor(rgb: 0xEC7D10)) //UIColor.systemRed)
-        let cat3 = CategoryViewModel(name: "Transport Offers", icon: "transport", color: UIColor(rgb: 0xC200FB)) //color: UIColor.systemIndigo)
-        let cat4 = CategoryViewModel(name: "Superstore Offers", icon: "superstore", color: UIColor(rgb: 0xD90368))//UIColor.orange)
-        let cat5 = CategoryViewModel(name: "Miscellaneous Offers", icon: "miscellaneous", color: UIColor(rgb: 0xB370B0))//UIColor.purple)
+        let cat1 = CategoryViewModel(name: "All Offers", icon: "offer", color: UIColor(rgb: 0x006747))//UIColor.systemBlue)
+        let cat2 = CategoryViewModel(name: "Food Offers", icon: "food", color: UIColor(rgb: 0xAE2573)) //UIColor.systemRed)
+        let cat3 = CategoryViewModel(name: "Transport Offers", icon: "transport", color: UIColor(rgb: 0xED8B00)) //color: UIColor.systemIndigo)
+        let cat4 = CategoryViewModel(name: "Superstore Offers", icon: "superstore", color: UIColor(rgb: 0x330072))//UIColor.orange)
+        let cat5 = CategoryViewModel(name: "Miscellaneous Offers", icon: "miscellaneous", color: UIColor(rgb: 0x00A499))//UIColor.purple)
         return [cat1, cat2, cat3, cat4, cat5]
     }
     
