@@ -16,36 +16,20 @@ struct OfferRowView: View {
         
         HStack {
             
-            offer.image
-
-                .resizable()
-
-                .frame(width: 50, height: 50)
-
-                .cornerRadius(8)
-
-                .overlay(CategoryOverlay(image: offer.icon, backgroundColor: offer.color))
+            IconView(image: offer.icon, size: 18, overlaySize: 30, backgroundColor: offer.color)
             
-            .padding(.leading, 10)
-            .padding(.bottom, 10)
-            
-//            IconView(image: offer.icon, size: 18, overlaySize: 30, backgroundColor: offer.color)
-//            
-//            .padding(.trailing, 5)
+            .padding(.trailing, 5)
 
             
             VStack(alignment: .leading) {
                 HStack {
                     Text(offer.title)
                         .font(.body)
-                               
-                        
                         .fontWeight(.medium)
                         .multilineTextAlignment(.leading)
                     
                     Spacer()
                 }
-                
                 
                 
                 Text(offer.description)

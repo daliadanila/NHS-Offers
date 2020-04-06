@@ -7,12 +7,13 @@
 //
 
 import SwiftUI
+import UIKit
 
 struct CategoryOverlay: View {
     
     let image: String
     
-    let backgroundColor: Color
+    let backgroundColor: UIColor
     
     let colors: [Color]
     
@@ -21,13 +22,18 @@ struct CategoryOverlay: View {
                        startPoint: .topLeading, endPoint: .bottomLeading)
     }
     
-    init(image: String, backgroundColor: Color) {
+    init(image: String, backgroundColor: UIColor) {
         
         self.image = image
         
         self.backgroundColor = backgroundColor
         
-        self.colors = [self.backgroundColor.opacity(0.9), backgroundColor.opacity(0.6)]
+        let darkColor = self.backgroundColor
+        
+        let lightColor = darkColor.lighter(amount: 0.8)
+        
+        self.colors = [Color(darkColor),
+                       Color(lightColor)]
     }
     
     var body: some View {
@@ -38,7 +44,7 @@ struct CategoryOverlay: View {
             // create a rectagular gradient from topleading edge to center edge
             Rectangle().fill(gradient).cornerRadius(8)
             
-            IconView(image: image, size: 18, overlaySize: 30, backgroundColor: backgroundColor)
+            IconView(image: image, size: 18, overlaySize: 30, backgroundColor: Color(backgroundColor))
                 .padding(.leading, 10)
                 .padding(.bottom, 10)
         }
@@ -49,7 +55,7 @@ struct CategoryOverlay_Previews: PreviewProvider {
     
     static var previews: some View {
         
-        return CategoryOverlay(image: "food", backgroundColor: .red)
+        return CategoryOverlay(image: "food", backgroundColor: .systemRed)
     }
 }
 

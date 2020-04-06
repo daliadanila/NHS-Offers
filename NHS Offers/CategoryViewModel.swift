@@ -17,9 +17,9 @@ struct CategoryViewModel: Identifiable {
     
     let icon: String
 
-    let color: Color
+    let color: UIColor
     
-    init(name: String, icon: String, color: Color) {
+    init(name: String, icon: String, color: UIColor) {
         
         self.name = name
         

@@ -12,31 +12,46 @@ struct ContentView: View {
 
     let offerCategories = TestData.offerCategories()
     
+    init() {
+
+         UINavigationBar.appearance().largeTitleTextAttributes = [
+            .foregroundColor: UIColor.white]
+
+    }
+    
     var body: some View {
         
         NavigationView {
             
             VStack {
-                ScrollView(.horizontal, content: {
-                    HStack(alignment: .top, spacing: 10) {
-                        
-                        ForEach(offerCategories) { category in
+                ZStack {
+                    
+                    Rectangle()
+                        .frame(height: 280)
+                        .edgesIgnoringSafeArea(.top)
+                        .foregroundColor(.blue)
+                    
+                    ScrollView(.horizontal, content: {
+                        HStack(alignment: .top, spacing: 10) {
                             
-                            CategoryView(category: category)
+                            ForEach(offerCategories) { category in
+                                
+                                CategoryView(category: category)
+                            }
+                                
                         }
-                            
-                    }
-                })
-                    
-                    
-                    .frame(height: 130)
-                    .padding(.leading, 10)
-                    .padding(.trailing, 10)
-                    
-                    
-                    .navigationBarTitle(Text("NHS Offers 🌈"))
+                    })
+                        
+                        
+                        .frame(height: 50)
+                        .padding(.leading, 10)
+                        .padding(.bottom, 150)
+                        
+                        .navigationBarTitle(Text("NHS Offers"))
+                }
                 
                 OfferListView()
+                .padding(.top, -140)
             }
         }
         
@@ -46,7 +61,9 @@ struct ContentView: View {
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
         
-        ForEach(["iPhone SE","iPhone 8", "iPhone XS Max"], id: \.self) { deviceName in
+        // ,"iPhone 8", "iPhone XS Max"
+        
+        ForEach(["iPhone SE", "iPhone 8","iPhone XS Max", "iPhone 11 Pro Max"], id: \.self) { deviceName in
             ContentView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
