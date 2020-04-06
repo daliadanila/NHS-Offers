@@ -11,6 +11,8 @@ import SwiftUI
 struct CategoryView: View {
 
   let category: CategoryViewModel
+    
+  @EnvironmentObject var categoryState : CategoryState
 
   var body: some View {
 
@@ -28,6 +30,7 @@ struct CategoryView: View {
             TapGesture()
                 .onEnded { _ in
                     
+                    self.categoryState.categoryType = self.category.icon
             }
     )
     }

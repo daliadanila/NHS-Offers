@@ -10,12 +10,33 @@ import SwiftUI
 
 struct OfferListView: View {
     
+    @EnvironmentObject var categoryState : CategoryState
+    
     var body: some View {
         
-        List(TestData.foodOffers(), id: \.id) { offer in
+        List(filteredOffers, id: \.id) { offer in
             OfferRowView(offer: offer)
         }
         
+    }
+    
+    var filteredOffers: [OfferRowViewModel] {
+        
+        switch categoryState.categoryType {
+            
+        case "offer":
+            return TestData.allOffers()
+        case "food":
+            return TestData.foodOffers()
+        case "transport":
+            return TestData.transportOffers()
+        case "miscellaneous":
+            return TestData.miscOffers()
+        case "superstore":
+            return TestData.superstoreOffers()
+        default:
+            return TestData.allOffers()
+        }
     }
 }
 
