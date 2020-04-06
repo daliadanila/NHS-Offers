@@ -10,6 +10,8 @@ import SwiftUI
 
 struct OfferDetailsView: View {
     
+    @State private var showShareSheet = false
+    
     var body: some View {
         
         VStack {
@@ -26,24 +28,36 @@ struct OfferDetailsView: View {
                 .padding(.trailing)
                 .padding(.bottom)
             
-                Button(action: {
-                    
-                    print("Get deal button tapped!")
-                }) {
-                    ButtonView(title: "Get deal")
-                    
+            Button(action: {
+                
+                print("Get deal button tapped!")
+                
+                if let url = URL(string: "https://www.hackingwithswift.com") {
+                    UIApplication.shared.open(url)
                 }
                 
-                Button(action: {
-                    
-                    print("Share button tapped!")
-                    
-                }) {
-                     ButtonView(title: "Share")
-                    
-                }
-    
-             Spacer()
+            }) {
+                ButtonView(title: "Get deal")
+                
+            }
+            
+            Button(action: {
+                
+                print("Share button tapped!")
+                
+                self.showShareSheet = true
+                
+                
+                
+            }) {
+                ButtonView(title: "Share")
+                
+            }
+            .sheet(isPresented: $showShareSheet) {
+                ShareSheet(activityItems: ["https://www.hackingwithswift.com"])
+            }
+            
+            Spacer()
             
             
         }

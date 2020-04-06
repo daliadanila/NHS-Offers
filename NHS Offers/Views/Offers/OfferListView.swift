@@ -19,6 +19,8 @@ struct OfferListView: View {
                 OfferRowView(offer: offer)
             }
         }
+        .listStyle(GroupedListStyle())
+        .environment(\.horizontalSizeClass, .regular)
         
     }
     

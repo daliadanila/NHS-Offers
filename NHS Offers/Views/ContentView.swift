@@ -9,14 +9,14 @@
 import SwiftUI
 
 struct ContentView: View {
-
+    
     let offerCategories = TestData.offerCategories()
     
     init() {
-
-         UINavigationBar.appearance().largeTitleTextAttributes = [
+        
+        UINavigationBar.appearance().largeTitleTextAttributes = [
             .foregroundColor: UIColor.white]
-
+        
     }
     
     var body: some View {
@@ -24,6 +24,7 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
+                
                 ZStack {
                     
                     Rectangle()
@@ -38,22 +39,21 @@ struct ContentView: View {
                                 
                                 CategoryView(category: category)
                             }
-                                
+                            
                         }
                     })
-                        
-                        
                         .frame(height: 50)
                         .padding(.leading, 10)
                         .padding(.bottom, 150)
-                        
                         .navigationBarTitle(Text("NHS Offers"))
                 }
                 
                 OfferListView()
-                .padding(.top, -140)
+                    .padding(.top, -140)
             }
         }
+        
+        .navigationViewStyle(StackNavigationViewStyle())
         
     }
 }
