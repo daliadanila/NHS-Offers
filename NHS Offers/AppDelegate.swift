@@ -7,6 +7,9 @@
 //
 
 import UIKit
+
+import Resolver
+
 import Firebase
 
 @UIApplicationMain
@@ -15,21 +18,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
 
-//        FirebaseApp.configure()
-//
-//        let db = Firestore.firestore()
-//
-//        let docRef = db.collection("nhs").document("offers")
-//
-//        docRef.getDocument { (document, error) in
-//            if let document = document, document.exists {
-//                let dataDescription = document.data().map(String.init(describing:)) ?? "nil"
-//                print("Document data: \(dataDescription)")
-//
-//            } else {
-//                print("Document does not exist")
-//            }
-//        }
+        FirebaseApp.configure()
         
         return true
     }
@@ -49,5 +38,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
 
 
+}
+
+extension Resolver: ResolverRegistering {
+    
+  public static func registerAllServices() {
+    
+    register { FirestoreOfferRepository() as OfferRepository }.scope(application)
+    
+  }
 }
 

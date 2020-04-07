@@ -3,18 +3,35 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "CategoryOverlay.init(image:backgroundColor:):CategoryOverlay.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "darkColor.uiColor()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "closure #1 in AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
          <PersistentStrings>
             <PersistentString
                value = "document.data()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in FirestoreOfferRepository.loadData():FirestoreOfferRepository.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "document.data([&quot;other&quot;])">
+            </PersistentString>
+            <PersistentString
+               value = "results">
+            </PersistentString>
+            <PersistentString
+               value = "document.data()[&quot;other&quot;]">
+            </PersistentString>
+            <PersistentString
+               value = "self.offers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CategoryOverlay.init(image:backgroundColor:):CategoryOverlay.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "darkColor.uiColor()">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

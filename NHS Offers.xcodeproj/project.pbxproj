@@ -11,6 +11,10 @@
 		2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67201F243B6160001F519C /* OfferDetailsView.swift */; };
 		2B672024243B6786001F519C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672023243B6786001F519C /* ButtonView.swift */; };
 		2B672026243B778A001F519C /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672025243B778A001F519C /* ShareSheet.swift */; };
+		2B67202E243B9BE3001F519C /* Offer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67202D243B9BE3001F519C /* Offer.swift */; };
+		2B672032243B9D90001F519C /* OfferList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672031243B9D90001F519C /* OfferList.swift */; };
+		2B672034243B9F6C001F519C /* FirestoreOfferRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672033243B9F6C001F519C /* FirestoreOfferRepository.swift */; };
+		2B672038243BB27C001F519C /* OfferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672037243BB27C001F519C /* OfferListViewModel.swift */; };
 		2BC81667243A4F39006E8AD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */; };
 		2BC81669243A53DD006E8AD4 /* OfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC81668243A53DD006E8AD4 /* OfferRowView.swift */; };
 		2BD0BF14243A5E78003E78F9 /* OfferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0BF13243A5E78003E78F9 /* OfferListView.swift */; };
@@ -36,6 +40,10 @@
 		2B67201F243B6160001F519C /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		2B672023243B6786001F519C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2B672025243B778A001F519C /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
+		2B67202D243B9BE3001F519C /* Offer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Offer.swift; sourceTree = "<group>"; };
+		2B672031243B9D90001F519C /* OfferList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferList.swift; sourceTree = "<group>"; };
+		2B672033243B9F6C001F519C /* FirestoreOfferRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreOfferRepository.swift; sourceTree = "<group>"; };
+		2B672037243BB27C001F519C /* OfferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewModel.swift; sourceTree = "<group>"; };
 		2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BC81668243A53DD006E8AD4 /* OfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRowView.swift; sourceTree = "<group>"; };
 		2BD0BF13243A5E78003E78F9 /* OfferListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListView.swift; sourceTree = "<group>"; };
@@ -81,12 +89,22 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		2BC8166A243A5548006E8AD4 /* Helpers */ = {
+		2B67202F243B9D7F001F519C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2B67202D243B9BE3001F519C /* Offer.swift */,
+				2B672031243B9D90001F519C /* OfferList.swift */,
+				2B672033243B9F6C001F519C /* FirestoreOfferRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2BC8166A243A5548006E8AD4 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
 				2BD0BF15243B2093003E78F9 /* UIColor+Modifying.swift */,
 			);
-			path = Helpers;
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 		2BDFE5DD2439E95500FB574B = {
@@ -110,10 +128,12 @@
 		2BDFE5E82439E95500FB574B /* NHS Offers */ = {
 			isa = PBXGroup;
 			children = (
-				2BC8166A243A5548006E8AD4 /* Helpers */,
+				2B67202F243B9D7F001F519C /* Model */,
+				2BC8166A243A5548006E8AD4 /* Utilities */,
 				2BDFE60A243A21C100FB574B /* Views */,
 				2BDFE5FE2439EF6F00FB574B /* CategoryViewModel.swift */,
 				2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */,
+				2B672037243BB27C001F519C /* OfferListViewModel.swift */,
 				2BDFE5E92439E95500FB574B /* AppDelegate.swift */,
 				2BDFE5EB2439E95500FB574B /* SceneDelegate.swift */,
 				2BDFE5EF2439E95600FB574B /* Assets.xcassets */,
@@ -288,12 +308,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B672038243BB27C001F519C /* OfferListViewModel.swift in Sources */,
 				2BC81669243A53DD006E8AD4 /* OfferRowView.swift in Sources */,
 				2BDFE5FF2439EF6F00FB574B /* CategoryViewModel.swift in Sources */,
 				2BD0BF14243A5E78003E78F9 /* OfferListView.swift in Sources */,
 				2BDFE5EA2439E95500FB574B /* AppDelegate.swift in Sources */,
+				2B672032243B9D90001F519C /* OfferList.swift in Sources */,
 				2B672026243B778A001F519C /* ShareSheet.swift in Sources */,
 				2BDFE6032439F4FB00FB574B /* CategoryView.swift in Sources */,
+				2B67202E243B9BE3001F519C /* Offer.swift in Sources */,
 				2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */,
 				2B67201C243B5C3E001F519C /* CategoryState.swift in Sources */,
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
@@ -304,6 +327,7 @@
 				2BD0BF16243B2093003E78F9 /* UIColor+Modifying.swift in Sources */,
 				2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */,
 				2BDFE5EE2439E95500FB574B /* ContentView.swift in Sources */,
+				2B672034243B9F6C001F519C /* FirestoreOfferRepository.swift in Sources */,
 				2B672024243B6786001F519C /* ButtonView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

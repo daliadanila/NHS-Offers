@@ -10,6 +10,8 @@ import SwiftUI
 
 struct OfferListView: View {
     
+    @ObservedObject var offerListVM = OfferListViewModel()
+    
     @EnvironmentObject var categoryState : CategoryState
     
     var body: some View {
