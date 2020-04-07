@@ -12,13 +12,13 @@ struct OfferListView: View {
     
     @ObservedObject var offerListVM = OfferListViewModel()
     
-    @EnvironmentObject var categoryState : CategoryState
+//    @EnvironmentObject var categoryState : CategoryState
     
     var body: some View {
         
-        List(filteredOffers, id: \.id) { offer in
+        List(offerListVM.offerRowViewModels) { offerRowVM in
             NavigationLink(destination: OfferDetailsView()) {
-                OfferRowView(offer: offer)
+                OfferRowView(offerRowVM: offerRowVM)
             }
         }
         .listStyle(GroupedListStyle())
@@ -26,24 +26,24 @@ struct OfferListView: View {
         
     }
     
-    var filteredOffers: [OfferRowViewModel] {
-        
-        switch categoryState.categoryType {
-            
-        case "offer":
-            return TestData.allOffers()
-        case "food":
-            return TestData.foodOffers()
-        case "transport":
-            return TestData.transportOffers()
-        case "miscellaneous":
-            return TestData.miscOffers()
-        case "superstore":
-            return TestData.superstoreOffers()
-        default:
-            return TestData.allOffers()
-        }
-    }
+//    var filteredOffers: [OfferRowViewModel] {
+//        
+//        switch categoryState.categoryType {
+//            
+//        case "offer":
+//            return TestData.allOffers()
+//        case "food":
+//            return TestData.foodOffers()
+//        case "transport":
+//            return TestData.transportOffers()
+//        case "miscellaneous":
+//            return TestData.miscOffers()
+//        case "superstore":
+//            return TestData.superstoreOffers()
+//        default:
+//            return TestData.allOffers()
+//        }
+//    }
 }
 
 struct OfferListView_Previews: PreviewProvider {

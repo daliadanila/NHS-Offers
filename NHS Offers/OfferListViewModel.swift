@@ -9,23 +9,44 @@
 import Foundation
 import Combine
 import Resolver
+import SwiftUI
 
 class OfferListViewModel: ObservableObject {
     
-  @Published var offerRepository: OfferRepository = Resolver.resolve()
- // @Published var taskCellViewModels = [TaskCellViewModel]()
-  
-  private var cancellables = Set<AnyCancellable>()
-  
-  init() {
+    @Published var offerRepository: OfferRepository = Resolver.resolve()
     
-    offerRepository.$offers.map { offers in
-      offers.map { offer in
-     //   OfferRowViewModel(offer: offer)
-      }
+    @Published var offerRowViewModels = [OfferRowViewModel]()
+    
+    @EnvironmentObject var categoryState : CategoryState
+    
+    private var cancellables = Set<AnyCancellable>()
+    
+    init() {
+        
+        offerRepository.$offers
+            .map { offers in
+                offers
+                    .map { offer in OfferRowViewModel(offer: offer)
+            }
+        }
+        .assign(to: \.offerRowViewModels, on: self)
+            
+        .store(in: &cancellables)
+//
+//        offerRepository.$offers
+//            .map { offers in
+//                offers
+//                    .filter {
+//
+//                       // print("---> \(self.categoryState.categoryType)")
+//
+//                         $0.type == OfferCategory.all }
+//                    .map { offer in OfferRowViewModel(offer: offer)
+//            }
+//        }
+//        .assign(to: \.offerRowViewModels, on: self)
+//
+//        .store(in: &cancellables)
     }
-//    .assign(to: \.taskCellViewModels, on: self)
-//    .store(in: &cancellables)
-  }
-
+    
 }

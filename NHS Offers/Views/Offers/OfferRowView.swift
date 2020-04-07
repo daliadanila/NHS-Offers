@@ -10,20 +10,20 @@ import SwiftUI
 
 struct OfferRowView: View {
     
-    var offer: OfferRowViewModel
+    @ObservedObject var offerRowVM: OfferRowViewModel
     
     var body: some View {
         
         HStack {
-            
-            IconView(image: offer.icon, size: 18, overlaySize: 30, backgroundColor: offer.color)
+          
+            IconView(image: offerRowVM.iconName, size: 18, overlaySize: 30, backgroundColor: Color(offerRowVM.iconBackgroundColor))
             
             .padding(.trailing, 5)
 
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(offer.title)
+                    Text(offerRowVM.offer.title)
                         .font(.body)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.leading)
@@ -32,7 +32,7 @@ struct OfferRowView: View {
                 }
                 
                 
-                Text(offer.description)
+                Text(offerRowVM.offer.details)
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
             }
@@ -42,18 +42,18 @@ struct OfferRowView: View {
     }
 }
 
-struct OfferRowView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        Group {
-            
-            OfferRowView(offer: TestData.foodOffers()[0])
-            
-            OfferRowView(offer: TestData.foodOffers()[1])
-        
-        }
-        
-        .previewLayout(.fixed(width:300, height: 70))
-    }
-}
+//struct OfferRowView_Previews: PreviewProvider {
+//
+//    static var previews: some View {
+//
+//        Group {
+//
+//            OfferRowView(offer: TestData.foodOffers()[0])
+//
+//            OfferRowView(offer: TestData.foodOffers()[1])
+//
+//        }
+//
+//        .previewLayout(.fixed(width:300, height: 70))
+//    }
+//}

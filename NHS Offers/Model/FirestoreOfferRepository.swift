@@ -14,10 +14,7 @@ class BaseOfferRepository {
   @Published var offers = [Offer]()
 }
 
-protocol OfferRepository: BaseOfferRepository {
-
-    
-}
+protocol OfferRepository: BaseOfferRepository { }
 
 class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, ObservableObject {
     
@@ -37,11 +34,15 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
     let docRef = db.collection("nhs")
     
     db.collection("testCollection").getDocuments() { (querySnapshot, err) in
+        
         if let err = err {
+            
             print("Error getting documents: \(err)")
+            
         } else {
             
             for document in querySnapshot!.documents {
+                
                 print("\(document.documentID) => \(document.data())")
                 
                 if let offer = try?  document.data(as: Offer.self) {
@@ -51,14 +52,6 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
             }
         }
     }
-    
-//    db.collection("tasks").order(by: "createdTime").addSnapshotListener { (querySnapshot, error) in // (2)
-//      if let querySnapshot = querySnapshot {
-//        self.tasks = querySnapshot.documents.compactMap { document -> Task? in // (3)
-//          try? document.data(as: Task.self) // (4)
-//        }
-//      }
-//    }
   }
 
 }

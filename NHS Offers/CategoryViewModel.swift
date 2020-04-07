@@ -13,18 +13,10 @@ struct CategoryViewModel: Identifiable {
 
     var id: String = UUID().uuidString
     
-    let name: String
+    let type: OfferCategory
     
-    let icon: String
-
-    let color: UIColor
-    
-    init(name: String, icon: String, color: UIColor) {
+    init(type: OfferCategory) {
         
-        self.name = name
-        
-        self.icon = icon
-        
-        self.color = color
+        self.type = type
     }
 }

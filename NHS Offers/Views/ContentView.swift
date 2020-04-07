@@ -8,10 +8,11 @@
 
 import SwiftUI
 import Resolver
+import Foundation
 
 struct ContentView: View {
     
-    let offerCategories = TestData.offerCategories()
+    let categories = OfferCategory.allCases
     
     init() {
         
@@ -27,20 +28,20 @@ struct ContentView: View {
             VStack {
                 
                 ZStack {
-                    
+
                     Rectangle()
                         .frame(height: 280)
                         .edgesIgnoringSafeArea(.top)
                         .foregroundColor(.blue)
-                    
+
                     ScrollView(.horizontal, content: {
                         HStack(alignment: .top, spacing: 10) {
-                            
-                            ForEach(offerCategories) { category in
-                                
+
+                            ForEach(categories) { category in
+
                                 CategoryView(category: category)
                             }
-                            
+
                         }
                     })
                         .frame(height: 50)

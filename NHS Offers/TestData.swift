@@ -9,17 +9,18 @@
 import UIKit
 import SwiftUI
 
-struct TestData {
+/*struct TestData {
     
     static func offerCategories() -> [CategoryViewModel] {
         
-        let cat1 = CategoryViewModel(name: "All Offers", icon: "offer", color: UIColor(rgb: 0x006747))//UIColor.systemBlue)
-        let cat2 = CategoryViewModel(name: "Food Offers", icon: "food", color: UIColor(rgb: 0xAE2573)) //UIColor.systemRed)
-        let cat3 = CategoryViewModel(name: "Transport Offers", icon: "transport", color: UIColor(rgb: 0xED8B00)) //color: UIColor.systemIndigo)
-        let cat4 = CategoryViewModel(name: "Superstore Offers", icon: "superstore", color: UIColor(rgb: 0x330072))//UIColor.orange)
-        let cat5 = CategoryViewModel(name: "Miscellaneous Offers", icon: "miscellaneous", color: UIColor(rgb: 0x00A499))//UIColor.purple)
+        let cat1 = CategoryViewModel(name: "All Offers", icon: "offerIcon", color: UIColor(rgb: 0x006747))//UIColor.systemBlue)
+        let cat2 = CategoryViewModel(name: "Food Offers", icon: "foodIcon", color: UIColor(rgb: 0xAE2573)) //UIColor.systemRed)
+        let cat3 = CategoryViewModel(name: "Transport Offers", icon: "transportIcon", color: UIColor(rgb: 0xED8B00)) //color: UIColor.systemIndigo)
+        let cat4 = CategoryViewModel(name: "Superstore Offers", icon: "superstoreIcon", color: UIColor(rgb: 0x330072))//UIColor.orange)
+        let cat5 = CategoryViewModel(name: "Miscellaneous Offers", icon: "miscellaneousIcon", color: UIColor(rgb: 0x00A499))//UIColor.purple)
         return [cat1, cat2, cat3, cat4, cat5]
     }
+}
     
     static func foodOffers() -> [OfferRowViewModel] {
         
@@ -69,3 +70,4 @@ struct TestData {
         return allOffers
     }
 }
+*/

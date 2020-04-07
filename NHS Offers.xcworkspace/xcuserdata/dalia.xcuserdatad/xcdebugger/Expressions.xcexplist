@@ -3,14 +3,6 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "document.data()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
          contextName = "closure #1 in FirestoreOfferRepository.loadData():FirestoreOfferRepository.swift">
          <PersistentStrings>
             <PersistentString
@@ -34,6 +26,28 @@
                value = "darkColor.uiColor()">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in AppDelegate.application(_:didFinishLaunchingWithOptions:):AppDelegate.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "document.data()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in OfferListViewModel.init():OfferListViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categoryState">
+            </PersistentString>
+            <PersistentString
+               value = "self.categoryState.categoryType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SceneDelegate.scene(_:willConnectTo:options:):SceneDelegate.swift">
       </ContextState>
    </ContextStates>
 </VariablesViewState>

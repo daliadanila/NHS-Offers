@@ -7,37 +7,62 @@
 //
 
 import SwiftUI
-import Foundation
+import Combine
+import Resolver
 
-struct OfferRowViewModel: Identifiable {
+class OfferRowViewModel: Identifiable, ObservableObject {
 
     var id: String = UUID().uuidString
     
-    let title: String
+    @Published var offer: Offer
     
-    let description: String
+    @Published var iconName = ""
     
-    let icon: String
+    @Published var iconBackgroundColor = UIColor.white
     
-    let color: Color
+    private var cancellables = Set<AnyCancellable>()
     
+//    let title: String
+//
+//    let description: String
+//
+//    let icon: String
+//
+//    let color: Color
+//
     
-    init(title: String, description: String, icon: String, color: Color) {
+//    init(title: String, description: String, icon: String, color: Color) {
+//
+//        self.title = title
+//
+//        self.description = description
+//
+//        self.icon = icon
+//
+//        self.color = color
+//    }
+    
+    init(offer: Offer) {
         
-        self.title = title
+        self.offer = offer
         
-        self.description = description
+        $offer
+            .map { $0.type.icon }
+        .assign(to: \.iconName, on: self)
+        .store(in: &cancellables)
         
-        self.icon = icon
+        $offer
+            .map { $0.type.color }
+        .assign(to: \.iconBackgroundColor, on: self)
+        .store(in: &cancellables)
         
-        self.color = color
     }
 }
-
-extension OfferRowViewModel {
-    
-    var image: Image {
-        
-        Image(icon)
-    }
-}
+//
+//extension OfferRowViewModel {
+//    
+//    var image: Image {
+//        
+//        Image(icon)
+//    }
+//}

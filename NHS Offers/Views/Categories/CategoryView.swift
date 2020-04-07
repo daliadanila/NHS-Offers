@@ -10,13 +10,13 @@ import SwiftUI
 
 struct CategoryView: View {
 
-  let category: CategoryViewModel
+  let category: OfferCategory
     
   @EnvironmentObject var categoryState : CategoryState
 
   var body: some View {
 
-      Image(category.name)
+      Image("")
 
         .frame(width: 110, height: 100)
         
@@ -24,24 +24,24 @@ struct CategoryView: View {
         
         .overlay(CategoryOverlay(image: category.icon, backgroundColor: category.color)) //Color("PrimaryBlue")
         
-        .overlay(NameOverlay(name: category.name))
+        .overlay(NameOverlay(name: category.rawValue.capitalizingFirstLetter() + " Offers"))
         
         .gesture(
             TapGesture()
                 .onEnded { _ in
                     
-                    self.categoryState.categoryType = self.category.icon
+                    self.categoryState.categoryType = self.category
             }
     )
     }
 }
 
-struct CategoryView_Previews: PreviewProvider {
-    
-    static var previews: some View {
-        
-        let offerCategories = TestData.offerCategories()
-        
-        return CategoryView(category: offerCategories[0])
-    }
-}
+//struct CategoryView_Previews: PreviewProvider {
+//    
+//    static var previews: some View {
+//        
+//        let offerCategories = TestData.offerCategories()
+//        
+//        return CategoryView(category: offerCategories[0])
+//    }
+//}
