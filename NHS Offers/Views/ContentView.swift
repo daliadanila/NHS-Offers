@@ -14,6 +14,8 @@ struct ContentView: View {
     
     let categories = OfferCategory.allCases
     
+    @EnvironmentObject var categoryState : CategoryState
+    
     init() {
         
         UINavigationBar.appearance().largeTitleTextAttributes = [
@@ -50,7 +52,7 @@ struct ContentView: View {
                         .navigationBarTitle(Text("NHS Offers"))
                 }
                 
-                OfferListView()
+                OfferListView(offerListVM: OfferListViewModel(categoryState: categoryState))
                     .padding(.top, -140)
             }
         }

@@ -17,33 +17,25 @@ class OfferListViewModel: ObservableObject {
     
     @Published var offerRowViewModels = [OfferRowViewModel]()
     
+    var categoryState : CategoryState
+    
     private var cancellables = Set<AnyCancellable>()
     
-    init() {
+    init(categoryState: CategoryState) {
         
-//        offerRepository.$offers
-//            .map { offers in
-//                offers
-//                    .map { offer in OfferRowViewModel(offer: offer)
-//            }
-//        }
-//        .assign(to: \.offerRowViewModels, on: self)
-//
-//        .store(in: &cancellables)
-//
+        self.categoryState = categoryState
+        
         offerRepository.$offers
             .map { offers in
                 offers
                     .filter {
-
-                       // print("---> \(self.categoryState.categoryType)")
-
-                        $0.type == OfferCategory.transport }
+                        self.categoryState.categoryType != OfferCategory.all ? ($0.type == self.categoryState.categoryType) : true }
+                    
                     .map { offer in OfferRowViewModel(offer: offer)
-            }
+                }
         }
         .assign(to: \.offerRowViewModels, on: self)
-
+            
         .store(in: &cancellables)
     }
     

@@ -10,5 +10,5 @@ import Foundation
 
 class CategoryState: ObservableObject {
     
-    @Published var categoryType: OfferCategory = OfferCategory.food
+    @Published var categoryType: OfferCategory = OfferCategory.all
 }
