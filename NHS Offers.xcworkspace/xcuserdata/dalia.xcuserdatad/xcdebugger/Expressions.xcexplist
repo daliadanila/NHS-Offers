@@ -49,5 +49,13 @@
       <ContextState
          contextName = "SceneDelegate.scene(_:willConnectTo:options:):SceneDelegate.swift">
       </ContextState>
+      <ContextState
+         contextName = "closure #1 in CategoryView.body.getter:CategoryView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.categoryState.categoryType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
    </ContextStates>
 </VariablesViewState>
