@@ -21,6 +21,8 @@ struct ContentView: View {
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .foregroundColor: UIColor.white]
         
+        UINavigationBar.appearance().tintColor = .white
+        
     }
     
     var body: some View {

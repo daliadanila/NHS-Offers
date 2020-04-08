@@ -24,7 +24,7 @@ struct CategoryView: View {
             
             .overlay(CategoryOverlay(image: category.icon, backgroundColor: category.color)) //Color("PrimaryBlue")
             
-            .overlay(NameOverlay(name: category.rawValue.capitalizingFirstLetter() + " Offers"))
+            .overlay(NameOverlay(name: category.rawValue.capitalizingFirstLetter() + " Offers", alignment: .topLeading, font: .footnote))
             
             .gesture(
                 TapGesture()
@@ -33,5 +33,13 @@ struct CategoryView: View {
                         self.categoryState.categoryType = self.category
                 }
         )
+    }
+}
+
+struct CategoryView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        
+        CategoryView(category: OfferCategory.food)
     }
 }

@@ -12,26 +12,38 @@ struct ButtonView: View {
     
     var title: String
     
-    init(title: String) {
+    var icon: String
+    
+    init(title: String, icon: String) {
         
         self.title = title
         
+        self.icon = icon
     }
     
     var body: some View {
         
-        Text(self.title)
+        HStack {
+            
+            Image(systemName: icon)
+                .font(.system(size: 18, weight: .semibold))
+            
+            Text(self.title)
+                .fontWeight(.semibold)
+            
+            
+        }
         .padding()
-        .background(Color.red)
         .foregroundColor(.white)
-        .font(.body)
-        .multilineTextAlignment(.center)
-        .padding(.top)
+        .background(Color.blue)
+        .cornerRadius(.infinity)
+        
+        
     }
 }
 
 struct ButtonView_Previews: PreviewProvider {
     static var previews: some View {
-        ButtonView(title: "Test")
+        ButtonView(title: "Share", icon: "square.and.arrow.up")
     }
 }

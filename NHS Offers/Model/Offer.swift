@@ -60,17 +60,17 @@ enum OfferCategory: String, Codable, CaseIterable, Identifiable {
             return UIColor(named: "NHS_Pink")!
             
         case OfferCategory.transport:
-            return UIColor(named: "NHS_Orange")!
+            return UIColor(named: "NHS_Green")!
             
         case OfferCategory.superstore:
             return UIColor(named: "NHS_Purple")!
             
         case OfferCategory.all:
             
-            return UIColor(named: "NHS_Green")!
+            return UIColor(named: "NHS_Orange")!
             
         default:
-            return UIColor(named: "NHS_Turquoise")!
+            return UIColor(named: "NHS_Red")!
         }
     }
 }

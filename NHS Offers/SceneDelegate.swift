@@ -26,7 +26,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
             let categoryState = CategoryState()
-            window.rootViewController = UIHostingController(rootView: contentView.environmentObject(categoryState))
+            window.rootViewController = HostingController(rootView: contentView.environmentObject(categoryState))
             self.window = window
             window.makeKeyAndVisible()
         }
