@@ -32,26 +32,25 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
     let db = Firestore.firestore()
     
     let docRef = db.collection("nhs")
-    
-    db.collection("testCollection").getDocuments() { (querySnapshot, err) in
+       
+    db.collection("testCollection").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in // (2)
         
-        if let err = err {
+        if let error = error {
             
-            print("Error getting documents: \(err)")
+            print("Error getting documents: \(error)")
             
         } else {
             
-            for document in querySnapshot!.documents {
+            if let querySnapshot = querySnapshot {
                 
-                print("\(document.documentID) => \(document.data())")
-                
-                if let offer = try?  document.data(as: Offer.self) {
+                self.offers = querySnapshot.documents.compactMap { document -> Offer? in
                     
-                    self.offers.append(offer)
+                    try? document.data(as: Offer.self)
                 }
             }
         }
     }
-  }
+    
+    }
 
 }
