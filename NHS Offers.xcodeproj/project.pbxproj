@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2B67201C243B5C3E001F519C /* CategoryState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67201B243B5C3E001F519C /* CategoryState.swift */; };
 		2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67201F243B6160001F519C /* OfferDetailsView.swift */; };
 		2B672024243B6786001F519C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672023243B6786001F519C /* ButtonView.swift */; };
 		2B672026243B778A001F519C /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672025243B778A001F519C /* ShareSheet.swift */; };
@@ -26,7 +25,6 @@
 		2BDFE5F32439E95600FB574B /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2BDFE5F22439E95600FB574B /* Preview Assets.xcassets */; };
 		2BDFE5F62439E95600FB574B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2BDFE5F42439E95600FB574B /* LaunchScreen.storyboard */; };
 		2BDFE5FF2439EF6F00FB574B /* CategoryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE5FE2439EF6F00FB574B /* CategoryViewModel.swift */; };
-		2BDFE6012439F00A00FB574B /* TestData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6002439F00A00FB574B /* TestData.swift */; };
 		2BDFE6032439F4FB00FB574B /* CategoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6022439F4FB00FB574B /* CategoryView.swift */; };
 		2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */; };
 		2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6062439F6FB00FB574B /* IconView.swift */; };
@@ -36,7 +34,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		2B67201B243B5C3E001F519C /* CategoryState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryState.swift; sourceTree = "<group>"; };
 		2B67201F243B6160001F519C /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		2B672023243B6786001F519C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2B672025243B778A001F519C /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
@@ -57,7 +54,6 @@
 		2BDFE5F52439E95600FB574B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2BDFE5F72439E95600FB574B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2BDFE5FE2439EF6F00FB574B /* CategoryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewModel.swift; sourceTree = "<group>"; };
-		2BDFE6002439F00A00FB574B /* TestData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestData.swift; sourceTree = "<group>"; };
 		2BDFE6022439F4FB00FB574B /* CategoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryView.swift; sourceTree = "<group>"; };
 		2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverlay.swift; sourceTree = "<group>"; };
 		2BDFE6062439F6FB00FB574B /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
@@ -141,8 +137,6 @@
 				2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */,
 				2BDFE5F72439E95600FB574B /* Info.plist */,
 				2BDFE5F12439E95600FB574B /* Preview Content */,
-				2BDFE6002439F00A00FB574B /* TestData.swift */,
-				2B67201B243B5C3E001F519C /* CategoryState.swift */,
 			);
 			path = "NHS Offers";
 			sourceTree = "<group>";
@@ -318,10 +312,8 @@
 				2BDFE6032439F4FB00FB574B /* CategoryView.swift in Sources */,
 				2B67202E243B9BE3001F519C /* Offer.swift in Sources */,
 				2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */,
-				2B67201C243B5C3E001F519C /* CategoryState.swift in Sources */,
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
 				2BDFE60F243A47C000FB574B /* OfferRowViewModel.swift in Sources */,
-				2BDFE6012439F00A00FB574B /* TestData.swift in Sources */,
 				2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */,
 				2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */,
 				2BD0BF16243B2093003E78F9 /* UIColor+Modifying.swift in Sources */,

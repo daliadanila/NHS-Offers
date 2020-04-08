@@ -74,3 +74,8 @@ enum OfferCategory: String, Codable, CaseIterable, Identifiable {
         }
     }
 }
+
+class CategoryState: ObservableObject {
+    
+    @Published var categoryType: OfferCategory = OfferCategory.all
+}

@@ -38,10 +38,8 @@ struct CategoryOverlay: View {
     
     var body: some View {
         
-        // ZStack - places views above each other
         ZStack(alignment: .bottomLeading) {
             
-            // create a rectagular gradient from topleading edge to center edge
             Rectangle().fill(gradient).cornerRadius(8)
             
             IconView(image: image, size: 18, overlaySize: 30, backgroundColor: Color(backgroundColor))

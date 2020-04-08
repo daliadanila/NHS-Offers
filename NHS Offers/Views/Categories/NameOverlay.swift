@@ -12,17 +12,14 @@ struct NameOverlay: View {
     
 
     let name: String
-    
 
     let colors: [Color] = [Color.clear.opacity(1), Color.clear.opacity(1)]
     
-
     var gradient: LinearGradient {
         LinearGradient(gradient: Gradient(colors: colors),
                        startPoint: .bottomLeading, endPoint: .center)
     }
     
-
     var body: some View {
         
         ZStack(alignment: .topLeading) {

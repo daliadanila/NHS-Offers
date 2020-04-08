@@ -21,27 +21,7 @@ class OfferRowViewModel: Identifiable, ObservableObject {
     @Published var iconBackgroundColor = UIColor.white
     
     private var cancellables = Set<AnyCancellable>()
-    
-//    let title: String
-//
-//    let description: String
-//
-//    let icon: String
-//
-//    let color: Color
-//
-    
-//    init(title: String, description: String, icon: String, color: Color) {
-//
-//        self.title = title
-//
-//        self.description = description
-//
-//        self.icon = icon
-//
-//        self.color = color
-//    }
-    
+      
     init(offer: Offer) {
         
         self.offer = offer
@@ -58,11 +38,3 @@ class OfferRowViewModel: Identifiable, ObservableObject {
         
     }
 }
-//
-//extension OfferRowViewModel {
-//    
-//    var image: Image {
-//        
-//        Image(icon)
-//    }
-//}
