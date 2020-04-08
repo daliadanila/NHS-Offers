@@ -10,20 +10,20 @@ import SwiftUI
 
 struct OfferRowView: View {
     
-    @ObservedObject var offerRowVM: OfferRowViewModel
+    @ObservedObject var offerDetailsVM: OfferDetailsViewModel
     
     var body: some View {
         
         HStack {
           
-            IconView(image: offerRowVM.iconName, size: 18, overlaySize: 30, backgroundColor: Color(offerRowVM.iconBackgroundColor))
+            IconView(image: offerDetailsVM.iconName, size: 18, overlaySize: 30, backgroundColor: Color(offerDetailsVM.iconBackgroundColor))
             
             .padding(.trailing, 5)
 
             
             VStack(alignment: .leading) {
                 HStack {
-                    Text(offerRowVM.offer.title)
+                    Text(offerDetailsVM.offer.title)
                         .font(.body)
                         .fontWeight(.medium)
                         .multilineTextAlignment(.leading)
@@ -32,7 +32,7 @@ struct OfferRowView: View {
                 }
                 
                 
-                Text(offerRowVM.offer.details)
+                Text(offerDetailsVM.offer.details)
                     .font(.footnote)
                     .multilineTextAlignment(.leading)
             }

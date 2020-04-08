@@ -1,5 +1,5 @@
 //
-//  OfferRowViewModel.swift
+//  OfferDetailsViewModel.swift
 //  NHS Offers
 //
 //  Created by Dalia on 05/04/2020.
@@ -10,7 +10,7 @@ import SwiftUI
 import Combine
 import Resolver
 
-class OfferRowViewModel: Identifiable, ObservableObject {
+class OfferDetailsViewModel: Identifiable, ObservableObject {
 
     var id: String = UUID().uuidString
     

@@ -14,9 +14,9 @@ struct OfferListView: View {
     
     var body: some View {
         
-        List(offerListVM.offerRowViewModels) { offerRowVM in
+        List(offerListVM.offerDetailsViewModels) { offerRowVM in
             NavigationLink(destination: OfferDetailsView()) {
-                OfferRowView(offerRowVM: offerRowVM)
+                OfferRowView(offerDetailsVM: offerRowVM)
             }
         }
         .listStyle(GroupedListStyle())

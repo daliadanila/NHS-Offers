@@ -15,7 +15,7 @@ class OfferListViewModel: ObservableObject {
     
     @Published var offerRepository: OfferRepository = Resolver.resolve()
     
-    @Published var offerRowViewModels = [OfferRowViewModel]()
+    @Published var offerDetailsViewModels = [OfferDetailsViewModel]()
     
     var categoryState : CategoryState
     
@@ -31,10 +31,10 @@ class OfferListViewModel: ObservableObject {
                     .filter {
                         self.categoryState.categoryType != OfferCategory.all ? ($0.type == self.categoryState.categoryType) : true }
                     
-                    .map { offer in OfferRowViewModel(offer: offer)
+                    .map { offer in OfferDetailsViewModel(offer: offer)
                 }
         }
-        .assign(to: \.offerRowViewModels, on: self)
+        .assign(to: \.offerDetailsViewModels, on: self)
             
         .store(in: &cancellables)
     }

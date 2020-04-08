@@ -29,7 +29,7 @@
 		2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */; };
 		2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6062439F6FB00FB574B /* IconView.swift */; };
 		2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6082439F7DC00FB574B /* NameOverlay.swift */; };
-		2BDFE60F243A47C000FB574B /* OfferRowViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */; };
+		2BDFE60F243A47C000FB574B /* OfferDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE60E243A47C000FB574B /* OfferDetailsViewModel.swift */; };
 		312D21CA3E8963D8EAE0F6BD /* Pods_NHS_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,7 +58,7 @@
 		2BDFE6042439F6B200FB574B /* CategoryOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryOverlay.swift; sourceTree = "<group>"; };
 		2BDFE6062439F6FB00FB574B /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		2BDFE6082439F7DC00FB574B /* NameOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOverlay.swift; sourceTree = "<group>"; };
-		2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRowViewModel.swift; sourceTree = "<group>"; };
+		2BDFE60E243A47C000FB574B /* OfferDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewModel.swift; sourceTree = "<group>"; };
 		86F1DECD766898528FA6D531 /* Pods-NHS Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHS_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7850A1CE0E528FC3F34A53 /* Pods-NHS Offers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,7 +128,7 @@
 				2BC8166A243A5548006E8AD4 /* Utilities */,
 				2BDFE60A243A21C100FB574B /* Views */,
 				2BDFE5FE2439EF6F00FB574B /* CategoryViewModel.swift */,
-				2BDFE60E243A47C000FB574B /* OfferRowViewModel.swift */,
+				2BDFE60E243A47C000FB574B /* OfferDetailsViewModel.swift */,
 				2B672037243BB27C001F519C /* OfferListViewModel.swift */,
 				2BDFE5E92439E95500FB574B /* AppDelegate.swift */,
 				2BDFE5EB2439E95500FB574B /* SceneDelegate.swift */,
@@ -313,7 +313,7 @@
 				2B67202E243B9BE3001F519C /* Offer.swift in Sources */,
 				2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */,
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
-				2BDFE60F243A47C000FB574B /* OfferRowViewModel.swift in Sources */,
+				2BDFE60F243A47C000FB574B /* OfferDetailsViewModel.swift in Sources */,
 				2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */,
 				2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */,
 				2BD0BF16243B2093003E78F9 /* UIColor+Modifying.swift in Sources */,
