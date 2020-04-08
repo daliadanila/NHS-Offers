@@ -7,30 +7,40 @@
 //
 
 import SwiftUI
-import SwiftUIRefresh
 
 struct OfferListView: View {
     
     @ObservedObject var offerListVM : OfferListViewModel
     
-    @State private var isShowing = false
-    
     var body: some View {
         
-        List(offerListVM.offerDetailsViewModels) { offerDetailsVM in
-            NavigationLink(destination: OfferDetailsView(offerDetailsVM: offerDetailsVM)) {
-                OfferRowView(offerDetailsVM: offerDetailsVM)
-            }
-        }
-        .pullToRefresh(isShowing: $isShowing) {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
-                self.isShowing = false
+        List {
+            
+            if offerListVM.offerDetailsViewModels.isEmpty {
+                emptySection
+            } else {
+                offersSection
             }
         }
         .listStyle(GroupedListStyle())
         .environment(\.horizontalSizeClass, .regular)
         
     }
+    
+
+    var emptySection: some View {
+      Section {
+        Text("No results")
+            .foregroundColor(.gray)
+      }
+    }
+    
+    var offersSection: some View {
+      Section {
+        ForEach(offerListVM.offerDetailsViewModels, content: OfferRowView.init(offerDetailsVM:))
+      }
+    }
+
 }
 
 struct OfferListView_Previews: PreviewProvider {

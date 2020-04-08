@@ -27,30 +27,30 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
         loadData()
     }
     
-  private func loadData() {
-    
-    let db = Firestore.firestore()
-    
-    let docRef = db.collection("nhs")
-       
-    db.collection("testCollection").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in // (2)
+    private func loadData() {
         
-        if let error = error {
+        let db = Firestore.firestore()
+        
+        let docRef = db.collection("nhs")
+        
+        db.collection("testCollection").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in // (2)
             
-            print("Error getting documents: \(error)")
-            
-        } else {
-            
-            if let querySnapshot = querySnapshot {
+            if let error = error {
                 
-                self.offers = querySnapshot.documents.compactMap { document -> Offer? in
+                print("Error getting documents: \(error)")
+                
+            } else {
+                
+                if let querySnapshot = querySnapshot {
                     
-                    try? document.data(as: Offer.self)
+                    self.offers = querySnapshot.documents.compactMap { document -> Offer? in
+                        
+                        try? document.data(as: Offer.self)
+                    }
                 }
             }
         }
+        
     }
     
-    }
-
 }

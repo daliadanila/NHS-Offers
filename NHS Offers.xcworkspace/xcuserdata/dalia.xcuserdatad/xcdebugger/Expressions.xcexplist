@@ -3,6 +3,47 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "closure #1 in closure #1 in OfferListViewModel.init():OfferListViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categoryState">
+            </PersistentString>
+            <PersistentString
+               value = "self.categoryState.categoryType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in OfferListView.body.getter:OfferListView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "offerListVM.offerRepository.offers">
+            </PersistentString>
+            <PersistentString
+               value = "offerListVM.offerRepository.$offers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SceneDelegate.scene(_:willConnectTo:options:):SceneDelegate.swift">
+      </ContextState>
+      <ContextState
+         contextName = "CategoryOverlay.init(image:backgroundColor:):CategoryOverlay.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "darkColor.uiColor()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in CategoryView.body.getter:CategoryView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.categoryState.categoryType">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "closure #1 in FirestoreOfferRepository.loadData():FirestoreOfferRepository.swift">
          <PersistentStrings>
             <PersistentString
@@ -17,13 +58,8 @@
             <PersistentString
                value = "self.offers">
             </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CategoryOverlay.init(image:backgroundColor:):CategoryOverlay.swift">
-         <PersistentStrings>
             <PersistentString
-               value = "darkColor.uiColor()">
+               value = "querySnapshot.documents">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -32,28 +68,6 @@
          <PersistentStrings>
             <PersistentString
                value = "document.data()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in closure #1 in OfferListViewModel.init():OfferListViewModel.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "categoryState">
-            </PersistentString>
-            <PersistentString
-               value = "self.categoryState.categoryType">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "SceneDelegate.scene(_:willConnectTo:options:):SceneDelegate.swift">
-      </ContextState>
-      <ContextState
-         contextName = "closure #1 in CategoryView.body.getter:CategoryView.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "self.categoryState.categoryType">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

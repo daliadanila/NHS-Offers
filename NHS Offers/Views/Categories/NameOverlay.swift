@@ -43,7 +43,7 @@ struct NameOverlay: View {
             Text(name)
                 .font(font)
                 .bold()
-                .multilineTextAlignment(.center)
+                .multilineTextAlignment(.leading)
                 .padding(10)
         }
         .foregroundColor(.white)
