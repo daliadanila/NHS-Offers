@@ -24,6 +24,7 @@ struct OfferDetailsView: View {
                 
                 NameOverlay(name: offerDetailsVM.offer.title, alignment: .center, font: .title)
                     .background(Color(UIColor.clear))
+                .padding(.top, 35)
                 
             }
                 
@@ -35,9 +36,8 @@ struct OfferDetailsView: View {
             Text(offerDetailsVM.offer.details)
                 .font(.headline)
                 .multilineTextAlignment(.center)
-                .padding([.top, .leading], 10)
-                .padding(.trailing, 10)
-                .padding(20.0)
+                .padding([.top, .bottom], 40)
+                .padding([.trailing, .leading], 20)
             
             HStack {
                 
@@ -77,7 +77,7 @@ struct OfferDetailsView: View {
             
         }
             
-        .background(Color(UIColor.init(rgb: 0xF2F2F7)))
+        .background(Color(UIColor.init(hex: 0xF2F2F7)))
     }
 }
 

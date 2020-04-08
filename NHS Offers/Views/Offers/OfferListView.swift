@@ -36,11 +36,15 @@ struct OfferListView: View {
     }
     
     var offersSection: some View {
-      Section {
-        ForEach(offerListVM.offerDetailsViewModels, content: OfferRowView.init(offerDetailsVM:))
-      }
+        Section {
+            ForEach(offerListVM.offerDetailsViewModels) { offerDetailsVM in
+                
+                NavigationLink(destination: OfferDetailsView(offerDetailsVM: offerDetailsVM)) {
+                    OfferRowView(offerDetailsVM: offerDetailsVM)
+                }
+            }
+        }
     }
-
 }
 
 struct OfferListView_Previews: PreviewProvider {

@@ -31,7 +31,7 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
         
         let db = Firestore.firestore()
         
-        db.collection("nhs").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in // (2)
+        db.collection("nhs").order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in
             
             if let error = error {
                 
