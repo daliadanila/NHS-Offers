@@ -25,6 +25,13 @@ struct SearchBar: UIViewRepresentable {
         func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
             text = searchText
         }
+        
+        func searchBarCancelButtonClicked(_ searchBar: UISearchBar) {
+            
+            searchBar.text = ""
+            text = searchBar.text!
+            searchBar.resignFirstResponder()
+        }
     }
 
     func makeCoordinator() -> SearchBar.Coordinator {
@@ -37,6 +44,8 @@ struct SearchBar: UIViewRepresentable {
         searchBar.placeholder = placeholder
         searchBar.searchBarStyle = .minimal
         searchBar.autocapitalizationType = .none
+        searchBar.showsCancelButton = true
+        searchBar.barTintColor = UIColor.white
         searchBar.searchTextField.backgroundColor = UIColor.white
         return searchBar
     }
