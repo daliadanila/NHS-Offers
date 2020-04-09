@@ -2,22 +2,20 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "icons8-buying-92.png",
       "scale" : "1x"
     },
     {
+      "filename" : "rainbow.png",
       "idiom" : "universal",
-      "filename" : "icons8-buying-91.png",
       "scale" : "2x"
     },
     {
       "idiom" : "universal",
-      "filename" : "icons8-buying-90.png",
       "scale" : "3x"
     }
   ],
   "info" : {
-    "version" : 1,
-    "author" : "xcode"
+    "author" : "xcode",
+    "version" : 1
   }
 }

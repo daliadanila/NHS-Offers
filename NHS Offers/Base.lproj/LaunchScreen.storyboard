@@ -15,6 +15,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="ip3-7B-4LO">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rainbow" translatesAutoresizingMaskIntoConstraints="NO" id="Hci-z9-CQo">
                                 <rect key="frame" x="70" y="401" width="274" height="94"/>
                                 <constraints>
@@ -22,21 +25,25 @@
                                 </constraints>
                             </imageView>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="Hci-z9-CQo" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="3hR-19-jdg"/>
+                            <constraint firstItem="ip3-7B-4LO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="M31-GL-dBM"/>
+                            <constraint firstItem="ip3-7B-4LO" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="34" id="ORd-nd-5aN"/>
                             <constraint firstItem="Hci-z9-CQo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="70" id="XTI-bC-v8M"/>
+                            <constraint firstItem="ip3-7B-4LO" firstAttribute="centerX" secondItem="Hci-z9-CQo" secondAttribute="centerX" id="aZL-GR-YE6"/>
                             <constraint firstItem="Hci-z9-CQo" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="hqI-QG-r9G"/>
+                            <constraint firstItem="ip3-7B-4LO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="s5O-4L-Ol6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="52.173913043478265" y="375"/>
+            <point key="canvasLocation" x="49.275362318840585" y="375"/>
         </scene>
     </scenes>
     <resources>
-        <image name="rainbow" width="50" height="50"/>
+        <image name="background" width="512" height="512"/>
+        <image name="rainbow" width="256" height="256"/>
     </resources>
 </document>
