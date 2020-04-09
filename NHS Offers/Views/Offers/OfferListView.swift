@@ -10,6 +10,8 @@ import SwiftUI
 
 struct OfferListView: View {
     
+    @EnvironmentObject var categoryState : CategoryState
+    
     @ObservedObject var offerListVM : OfferListViewModel
     
     @Binding var searchText : String 
@@ -19,9 +21,12 @@ struct OfferListView: View {
             
             List {
                 
-                if offerListVM.offerDetailsViewModels.isEmpty {
+                if filteredOffers.isEmpty {
+                    
                     emptySection
-                } else {
+                }
+                else {
+                    
                     offersSection
                 }
             }
@@ -30,20 +35,6 @@ struct OfferListView: View {
         }
         
     }
-    
-    //    NavigationView {
-    //        VStack {
-    //            SearchBar(text: $searchText, placeholder: "Search cars")
-    //            List {
-    //                ForEach(self.cars.filter {
-    //                    self.searchText.isEmpty ? true : $0.lowercased().contains(self.searchText.lowercased())
-    //                }, id: \.self) { car in
-    //                    Text(car)
-    //                }
-    //            }.navigationBarTitle(Text("Cars"))
-    //        }
-    //    }
-    
     
     var emptySection: some View {
         Section {
@@ -56,14 +47,26 @@ struct OfferListView: View {
         
         Section {
             
-            ForEach(offerListVM.offerDetailsViewModels.filter {
-                self.searchText.isEmpty ? true : $0.offer.title.lowercased().contains(self.searchText.lowercased())
-            }) { offerDetailsVM in
+            ForEach(filteredOffers)
+            { offerDetailsVM in
                 
                 NavigationLink(destination: OfferDetailsView(offerDetailsVM: offerDetailsVM)) {
                     OfferRowView(offerDetailsVM: offerDetailsVM)
                 }
             }
+            
+        }
+    }
+    
+    var filteredOffers: [OfferDetailsViewModel] {
+        
+        return offerListVM.offerDetailsViewModels.filter {
+        
+        self.searchText.isEmpty ?
+            (self.categoryState.categoryType != OfferCategory.all ? ($0.offer.type == self.categoryState.categoryType) : true)
+            :
+            $0.offer.title.lowercased().contains(self.searchText.lowercased())
+        
         }
     }
 }
@@ -74,7 +77,7 @@ struct OfferListView: View {
 //        
 //        ForEach(["iPhone SE", "iPhone XS Max", "iPad Pro (11-inch)"], id: \.self) { deviceName in
 //            
-//            OfferListView(offerListVM: OfferListViewModel(categoryState: CategoryState()))
+//            OfferListView(offerListVM: OfferListViewModel())
 //                .previewDevice(PreviewDevice(rawValue: deviceName))
 //                .previewDisplayName(deviceName)
 //        }

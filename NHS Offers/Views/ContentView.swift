@@ -66,7 +66,7 @@ struct ContentView: View {
                         .navigationBarTitle(Text("NHS Offers"))
                 }
                 
-                OfferListView(offerListVM: OfferListViewModel(categoryState: categoryState), searchText: $searchText)
+                OfferListView(offerListVM: OfferListViewModel(), searchText: $searchText)
                     .padding(.top, -140)
             }
             .background(Color.blue)
