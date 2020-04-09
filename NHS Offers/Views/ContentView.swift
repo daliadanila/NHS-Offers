@@ -16,12 +16,16 @@ struct ContentView: View {
     
     @EnvironmentObject var categoryState : CategoryState
     
+    @State private var searchText : String = ""
+    
     init() {
         
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .foregroundColor: UIColor.white]
         
         UINavigationBar.appearance().tintColor = .white
+        
+        UINavigationBar.appearance().backgroundColor = UIColor.clear
         
     }
     
@@ -30,13 +34,25 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
+
+//                ZStack {
+//
+//                    Rectangle()
+//                        .foregroundColor(.blue)
+//
+//                    SearchBar(text: $searchText, placeholder: "Search offers")
+//                }
+//               // .frame(height: 200)
+//                .edgesIgnoringSafeArea(.top)
+                
+                SearchBar(text: $searchText, placeholder: "Search offers")
                 
                 ZStack {
 
                     Rectangle()
                         .frame(height: 280)
-                        .edgesIgnoringSafeArea(.top)
                         .foregroundColor(.blue)
+                        .edgesIgnoringSafeArea(.top)
 
                     ScrollView(.horizontal, content: {
                         HStack(alignment: .top, spacing: 10) {
@@ -54,13 +70,14 @@ struct ContentView: View {
                         .navigationBarTitle(Text("NHS Offers"))
                 }
                 
-                OfferListView(offerListVM: OfferListViewModel(categoryState: categoryState))
+                OfferListView(offerListVM: OfferListViewModel(categoryState: categoryState), searchText: $searchText)
                     .padding(.top, -140)
             }
+            .background(Color.blue)
         }
         
         .navigationViewStyle(StackNavigationViewStyle())
-        
+        .background(Color.blue)
     }
 }
 

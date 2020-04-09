@@ -15,6 +15,7 @@
 		2B672038243BB27C001F519C /* OfferListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672037243BB27C001F519C /* OfferListViewModel.swift */; };
 		2B67203A243CBBD6001F519C /* String+Capitalizing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672039243CBBD6001F519C /* String+Capitalizing.swift */; };
 		2B67203C243DF225001F519C /* HostingController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67203B243DF225001F519C /* HostingController.swift */; };
+		2BBDE040243F264000B952F3 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BBDE03F243F264000B952F3 /* SearchBar.swift */; };
 		2BC81667243A4F39006E8AD4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */; };
 		2BC81669243A53DD006E8AD4 /* OfferRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BC81668243A53DD006E8AD4 /* OfferRowView.swift */; };
 		2BD0BF14243A5E78003E78F9 /* OfferListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BD0BF13243A5E78003E78F9 /* OfferListView.swift */; };
@@ -43,6 +44,7 @@
 		2B672037243BB27C001F519C /* OfferListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListViewModel.swift; sourceTree = "<group>"; };
 		2B672039243CBBD6001F519C /* String+Capitalizing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Capitalizing.swift"; sourceTree = "<group>"; };
 		2B67203B243DF225001F519C /* HostingController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HostingController.swift; sourceTree = "<group>"; };
+		2BBDE03F243F264000B952F3 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
 		2BC81666243A4F39006E8AD4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		2BC81668243A53DD006E8AD4 /* OfferRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferRowView.swift; sourceTree = "<group>"; };
 		2BD0BF13243A5E78003E78F9 /* OfferListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferListView.swift; sourceTree = "<group>"; };
@@ -160,6 +162,7 @@
 				2BDFE5ED2439E95500FB574B /* ContentView.swift */,
 				2B672023243B6786001F519C /* ButtonView.swift */,
 				2B672025243B778A001F519C /* ShareSheet.swift */,
+				2BBDE03F243F264000B952F3 /* SearchBar.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -319,6 +322,7 @@
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
 				2BDFE60F243A47C000FB574B /* OfferDetailsViewModel.swift in Sources */,
 				2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */,
+				2BBDE040243F264000B952F3 /* SearchBar.swift in Sources */,
 				2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */,
 				2BD0BF16243B2093003E78F9 /* UIColor+Modifying.swift in Sources */,
 				2BDFE6052439F6B200FB574B /* CategoryOverlay.swift in Sources */,
