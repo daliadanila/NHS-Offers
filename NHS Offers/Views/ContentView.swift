@@ -25,8 +25,6 @@ struct ContentView: View {
         
         UINavigationBar.appearance().tintColor = .white
         
-        UINavigationBar.appearance().backgroundColor = UIColor.clear
-        
     }
     
     var body: some View {
@@ -35,17 +33,15 @@ struct ContentView: View {
             
             VStack {
 
-//                ZStack {
-//
-//                    Rectangle()
-//                        .foregroundColor(.blue)
-//
-//                    SearchBar(text: $searchText, placeholder: "Search offers")
-//                }
-//               // .frame(height: 200)
-//                .edgesIgnoringSafeArea(.top)
-                
-                SearchBar(text: $searchText, placeholder: "Search offers")
+                ZStack {
+
+                    Rectangle()
+                    .foregroundColor(.blue)
+                    .edgesIgnoringSafeArea(.top)
+
+                    SearchBar(text: $searchText, placeholder: "Search offers")
+                }
+                .frame(height: 50)
                 
                 ZStack {
 
@@ -77,7 +73,6 @@ struct ContentView: View {
         }
         
         .navigationViewStyle(StackNavigationViewStyle())
-        .background(Color.blue)
     }
 }
 
@@ -90,6 +85,7 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
+            .environmentObject(CategoryState())
         }
     }
 }
