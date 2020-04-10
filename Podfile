@@ -5,13 +5,16 @@ target 'NHS Offers' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for NHS Offers
-
 pod 'Firebase/Firestore'
 
-# Optionally, include the Swift extensions if you're using Swift.
 pod 'FirebaseFirestoreSwift'
 
 pod 'Resolver'
+
+pod 'Firebase/Analytics'
+
+pod 'Firebase/Messaging'
+
+pod 'Google-Mobile-Ads-SDK'
 
 end
