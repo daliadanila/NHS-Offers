@@ -12,10 +12,14 @@ import Resolver
 
 import Firebase
 
+import GoogleMobileAds
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        
+        // PN
         
         FirebaseApp.configure()
         
@@ -30,6 +34,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterD
         
         
         application.registerForRemoteNotifications()
+        
+        // Ads
+        
+        GADMobileAds.sharedInstance().start(completionHandler: nil)
         
         
         return true

@@ -18,6 +18,8 @@ struct ContentView: View {
     
     @State private var searchText : String = ""
     
+    @State private var adLoaded = false
+    
     init() {
         
         UINavigationBar.appearance().largeTitleTextAttributes = [
@@ -68,8 +70,10 @@ struct ContentView: View {
                 
                 OfferListView(offerListVM: OfferListViewModel(), searchText: $searchText)
                     .padding(.top, -140)
+                
+                AdView()
+                .frame(height: 50)
             }
-            .background(Color.blue)
         }
         
         .navigationViewStyle(StackNavigationViewStyle())

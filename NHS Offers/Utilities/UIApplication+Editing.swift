@@ -15,4 +15,14 @@ extension UIApplication {
         
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
+    
+    static var appUnitID_Debug: String? {
+        
+        return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Debug") as? String
+    }
+    
+    static var appUnitID_Live: String? {
+        
+        return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Live") as? String
+    }
 }

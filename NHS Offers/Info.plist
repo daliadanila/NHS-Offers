@@ -2,6 +2,10 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
+	<key>AdMob_AppUnitID_Debug</key>
+	<string>ca-app-pub-3940256099942544/2934735716</string>
+	<key>AdMob_AppUnitID_Live</key>
+	<string>ca-app-pub-1536345699088964/1677471924</string>
 	<key>GADApplicationIdentifier</key>
 	<string>ca-app-pub-1536345699088964~9986889558</string>
 	<key>UIUserInterfaceStyle</key>
