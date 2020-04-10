@@ -12,6 +12,8 @@ struct CategoryView: View {
     
     let category: OfferCategory
     
+    @Binding var searchText : String
+    
     @EnvironmentObject var categoryState : CategoryState
     
     var body: some View {
@@ -22,7 +24,7 @@ struct CategoryView: View {
             
             .cornerRadius(8)
             
-            .overlay(CategoryOverlay(image: category.icon, backgroundColor: category.color)) //Color("PrimaryBlue")
+            .overlay(CategoryOverlay(image: category.icon, backgroundColor: category.color)) 
             
             .overlay(NameOverlay(name: category.rawValue.capitalizingFirstLetter() + " Offers", alignment: .topLeading, font: .footnote))
             
@@ -30,16 +32,21 @@ struct CategoryView: View {
                 TapGesture()
                     .onEnded { _ in
                         
+                        self.searchText = ""
+                        
+                        UIApplication.shared.endEditing()
+                        
                         self.categoryState.categoryType = self.category
+                        
                 }
         )
     }
 }
 
-struct CategoryView_Previews: PreviewProvider {
-    static var previews: some View {
-        
-        
-        CategoryView(category: OfferCategory.food)
-    }
-}
+//struct CategoryView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        
+//        
+//        CategoryView(category: OfferCategory.food)
+//    }
+//}

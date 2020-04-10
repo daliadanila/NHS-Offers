@@ -48,11 +48,13 @@ struct OfferListView: View {
         Section {
             
             ForEach(filteredOffers)
-            { offerDetailsVM in
+            {
+                offerDetailsVM in
                 
                 NavigationLink(destination: OfferDetailsView(offerDetailsVM: offerDetailsVM)) {
                     OfferRowView(offerDetailsVM: offerDetailsVM)
                 }
+                
             }
             
         }
