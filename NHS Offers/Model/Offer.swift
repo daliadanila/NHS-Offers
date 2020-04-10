@@ -25,8 +25,8 @@ enum OfferCategory: String, Codable, CaseIterable, Identifiable {
     var id: String { rawValue }
 
     case all = "all"
-    case food = "food"
     case superstore = "superstore"
+    case food = "food"
     case transport = "transport"
     case miscellaneous = "miscellaneous"
 

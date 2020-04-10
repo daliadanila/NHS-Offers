@@ -14,7 +14,7 @@ struct SearchBar: UIViewRepresentable {
     
     var placeholder: String
 
-    class Coordinator: NSObject, UISearchBarDelegate {
+    class Coordinator: NSObject, UISearchBarDelegate, UITextFieldDelegate {
 
         @Binding var text: String
 
@@ -32,6 +32,13 @@ struct SearchBar: UIViewRepresentable {
             text = searchBar.text!
             searchBar.resignFirstResponder()
         }
+        
+        func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+             
+            UIApplication.shared.endEditing()
+            
+            return true
+        }
     }
 
     func makeCoordinator() -> SearchBar.Coordinator {
@@ -41,6 +48,7 @@ struct SearchBar: UIViewRepresentable {
     func makeUIView(context: UIViewRepresentableContext<SearchBar>) -> UISearchBar {
         let searchBar = UISearchBar(frame: .zero)
         searchBar.delegate = context.coordinator
+        searchBar.searchTextField.delegate = context.coordinator
         searchBar.placeholder = placeholder
         searchBar.searchBarStyle = .minimal
         searchBar.autocapitalizationType = .none

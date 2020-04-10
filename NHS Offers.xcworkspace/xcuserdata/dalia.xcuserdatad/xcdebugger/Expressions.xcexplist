@@ -3,15 +3,15 @@
    version = "1.0">
    <ContextStates>
       <ContextState
-         contextName = "closure #1 in closure #1 in OfferListViewModel.init():OfferListViewModel.swift">
+         contextName = "UIApplication.endEditing():UIApplication.swift">
          <PersistentStrings>
             <PersistentString
-               value = "categoryState">
-            </PersistentString>
-            <PersistentString
-               value = "self.categoryState.categoryType">
+               value = "UIResponder.resignFirstResponder">
             </PersistentString>
          </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "AppDelegate.messaging(_:didReceiveRegistrationToken:):AppDelegate.swift">
       </ContextState>
       <ContextState
          contextName = "closure #1 in OfferListView.body.getter:OfferListView.swift">
@@ -21,6 +21,17 @@
             </PersistentString>
             <PersistentString
                value = "offerListVM.offerRepository.$offers">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in closure #1 in OfferListViewModel.init():OfferListViewModel.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "categoryState">
+            </PersistentString>
+            <PersistentString
+               value = "self.categoryState.categoryType">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -68,6 +79,14 @@
          <PersistentStrings>
             <PersistentString
                value = "document.data()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #3 in closure #1 in closure #1 in ContentView.body.getter:ContentView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "self.searchText">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

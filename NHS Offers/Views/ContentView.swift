@@ -34,32 +34,32 @@ struct ContentView: View {
         NavigationView {
             
             VStack {
-
+                
                 ZStack {
-
+                    
                     Rectangle()
-                    .foregroundColor(.blue)
-                    .edgesIgnoringSafeArea(.top)
-
+                        .foregroundColor(.blue)
+                        .edgesIgnoringSafeArea(.top)
+                    
                     SearchBar(text: $searchText, placeholder: "Search offers")
                 }
                 .frame(height: 50)
                 
                 ZStack {
-
+                    
                     Rectangle()
-                        .frame(height: 280)
+                        .frame(height: 250)
                         .foregroundColor(.blue)
-                        .edgesIgnoringSafeArea(.top)
-
+                        .padding(.top, -10)
+                    
                     ScrollView(.horizontal, content: {
                         HStack(alignment: .top, spacing: 10) {
-
+                            
                             ForEach(categories) { category in
-
-                                CategoryView(category: category)
+                                
+                                CategoryView(category: category, searchText: self.$searchText)
                             }
-
+                            
                         }
                     })
                         .frame(height: 50)
@@ -70,12 +70,18 @@ struct ContentView: View {
                 
                 OfferListView(offerListVM: OfferListViewModel(), searchText: $searchText)
                     .padding(.top, -140)
+                    .onAppear {
+                        
+                        self.searchText = ""
+                        
+                        UIApplication.shared.endEditing()
+                }
                 
                 AdView()
-                .frame(height: 50)
+                    .frame(height: 50)
             }
         }
-        
+            
         .navigationViewStyle(StackNavigationViewStyle())
     }
 }
@@ -89,7 +95,7 @@ struct ContentView_Previews: PreviewProvider {
             ContentView()
                 .previewDevice(PreviewDevice(rawValue: deviceName))
                 .previewDisplayName(deviceName)
-            .environmentObject(CategoryState())
+                .environmentObject(CategoryState())
         }
     }
 }
