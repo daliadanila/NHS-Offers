@@ -16,13 +16,13 @@ extension UIApplication {
         sendAction(#selector(UIResponder.resignFirstResponder), to: nil, from: nil, for: nil)
     }
     
-    static var appUnitID_Debug: String? {
+    static var appUnitID: String? {
+
+        #if DEBUG
+            return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Debug") as? String
+        #else
+            return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Live") as? String
+        #endif
         
-        return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Debug") as? String
-    }
-    
-    static var appUnitID_Live: String? {
-        
-        return Bundle.main.object(forInfoDictionaryKey: "AdMob_AppUnitID_Live") as? String
     }
 }

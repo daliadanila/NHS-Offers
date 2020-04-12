@@ -15,6 +15,8 @@ pod 'Firebase/Analytics'
 
 pod 'Firebase/Messaging'
 
+pod 'Firebase/Crashlytics'
+
 pod 'Google-Mobile-Ads-SDK'
 
 end

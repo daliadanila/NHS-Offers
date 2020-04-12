@@ -21,7 +21,7 @@ struct AdView : UIViewRepresentable
     func makeUIView(context: UIViewRepresentableContext<AdView>) -> GADBannerView
     {
         let banner = GADBannerView(adSize: kGADAdSizeBanner)
-        banner.adUnitID = UIApplication.appUnitID_Debug
+        banner.adUnitID = UIApplication.appUnitID
         banner.rootViewController = UIApplication.shared.windows.first?.rootViewController
         banner.load(GADRequest())
         banner.delegate = context.coordinator
