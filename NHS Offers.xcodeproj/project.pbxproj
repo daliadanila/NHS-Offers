@@ -34,7 +34,7 @@
 		2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6062439F6FB00FB574B /* IconView.swift */; };
 		2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE6082439F7DC00FB574B /* NameOverlay.swift */; };
 		2BDFE60F243A47C000FB574B /* OfferDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2BDFE60E243A47C000FB574B /* OfferDetailsViewModel.swift */; };
-		312D21CA3E8963D8EAE0F6BD /* Pods_NHS_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */; };
+		2BFDE70B24434B9000AACFF6 /* Pods_NHS_Offers.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2BFDE70A24434B9000AACFF6 /* Pods_NHS_Offers.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +68,7 @@
 		2BDFE6062439F6FB00FB574B /* IconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconView.swift; sourceTree = "<group>"; };
 		2BDFE6082439F7DC00FB574B /* NameOverlay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NameOverlay.swift; sourceTree = "<group>"; };
 		2BDFE60E243A47C000FB574B /* OfferDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsViewModel.swift; sourceTree = "<group>"; };
+		2BFDE70A24434B9000AACFF6 /* Pods_NHS_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Pods_NHS_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		86F1DECD766898528FA6D531 /* Pods-NHS Offers.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.debug.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.debug.xcconfig"; sourceTree = "<group>"; };
 		BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NHS_Offers.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		EB7850A1CE0E528FC3F34A53 /* Pods-NHS Offers.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NHS Offers.release.xcconfig"; path = "Pods/Target Support Files/Pods-NHS Offers/Pods-NHS Offers.release.xcconfig"; sourceTree = "<group>"; };
@@ -78,7 +79,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				312D21CA3E8963D8EAE0F6BD /* Pods_NHS_Offers.framework in Frameworks */,
+				2BFDE70B24434B9000AACFF6 /* Pods_NHS_Offers.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -199,6 +200,7 @@
 		F0576C6265B369981663CE64 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				2BFDE70A24434B9000AACFF6 /* Pods_NHS_Offers.framework */,
 				BFB174635C65A4C47A8BC5DA /* Pods_NHS_Offers.framework */,
 			);
 			name = Frameworks;
@@ -216,7 +218,7 @@
 				2BDFE5E32439E95500FB574B /* Frameworks */,
 				2BDFE5E42439E95500FB574B /* Resources */,
 				CE036317779F5DDA13F07188 /* [CP] Embed Pods Frameworks */,
-				2B20E229244348FA00E8FB50 /* ShellScript */,
+				2B20E229244348FA00E8FB50 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -275,22 +277,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		2B20E229244348FA00E8FB50 /* ShellScript */ = {
+		2B20E229244348FA00E8FB50 /* Run Script */ = {
 			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
+			buildActionMask = 8;
 			files = (
 			);
 			inputFileListPaths = (
 			);
 			inputPaths = (
 			);
+			name = "Run Script";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 			);
-			runOnlyForDeploymentPostprocessing = 0;
+			runOnlyForDeploymentPostprocessing = 1;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/FirebaseCrashlytics/run\"\n${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}/Contents/Resources/DWARF/${TARGET_NAME}\n$(SRCROOT)/$(BUILT_PRODUCTS_DIR)/$(INFOPLIST_PATH)\n";
+			shellScript = "\"${PODS_ROOT}/Fabric/upload-symbols\" -gsp \"${PROJECT_DIR}/GoogleService-Info.plist\" -p ios \"${DWARF_DSYM_FOLDER_PATH}/${DWARF_DSYM_FILE_NAME}\"\n";
 		};
 		4385E6685E2F38C94AE7DE93 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -496,6 +499,7 @@
 				CODE_SIGN_ENTITLEMENTS = "NHS Offers/NHS Offers.entitlements";
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_ASSET_PATHS = "\"NHS Offers/Preview Content\"";
 				DEVELOPMENT_TEAM = 739Y89842X;
 				ENABLE_PREVIEWS = YES;

@@ -32,5 +32,7 @@
 	<string>1:405747189377:ios:6282086a78ac788ec06f80</string>
 	<key>DATABASE_URL</key>
 	<string>https://nhs-offers.firebaseio.com</string>
+	<key>ADMOB_APP_ID</key>
+	<string>ca-app-pub-1536345699088964~9986889558</string>
 </dict>
 </plist>
