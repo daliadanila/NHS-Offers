@@ -8,10 +8,12 @@
 
 import Foundation
 import Firebase
+import Resolver
+import Combine
 
 class BaseOfferRepository {
     
-  @Published var offers = [Offer]()
+    @Published var offers = [Offer]()
 }
 
 protocol OfferRepository: BaseOfferRepository { }
@@ -20,39 +22,67 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
     
     var db = Firestore.firestore()
     
+    @Injected var authenticationService: AuthenticationService
+    
+    var userId: String = "unknown"
+    
+    private var listenerRegistration: ListenerRegistration?
+    
+    private var cancellables = Set<AnyCancellable>()
+    
     override init() {
-        
         super.init()
         
-        loadCollectionWithName(collectionName: "nhs")
+        authenticationService.$user
+            .compactMap { user in
+                user?.uid
+        }
+        .assign(to: \.userId, on: self)
+        .store(in: &cancellables)
         
-        loadCollectionWithName(collectionName: "manual")
+        // (re)load data if user changes
+        authenticationService.$user
+            .receive(on: DispatchQueue.main)
+            .sink { user in
+                self.loadData()
+        }
+        .store(in: &cancellables)
+    }
+    
+    private func loadData() {
+        
+     //   loadCollectionWithName(collectionName: "nhs")
+        
+        loadCollectionWithName(collectionName: "testCollection")
     }
     
     private func loadCollectionWithName(collectionName: String) {
         
-        let db = Firestore.firestore()
-        
-        db.collection(collectionName).order(by: "timestamp").addSnapshotListener { (querySnapshot, error) in
-            
-            if let error = error {
-                
-                print("Error getting documents: \(error)")
-                
-            } else {
-                
-                if let querySnapshot = querySnapshot {
-                    
-                    self.offers.append(contentsOf: querySnapshot.documents.compactMap { document -> Offer? in
-                        
-                        try? document.data(as: Offer.self)
-                    })
-                }
-            }
+        if listenerRegistration != nil {
+            listenerRegistration?.remove()
         }
         
-        
-        
+        listenerRegistration =
+            
+            db.collection(collectionName)
+            .order(by: "timestamp")
+            .addSnapshotListener { (querySnapshot, error) in
+                
+                if let error = error {
+                    
+                    print("Error getting documents: \(error)")
+                    
+                } else {
+                    
+                    if let querySnapshot = querySnapshot {
+                        
+                        self.offers.append(contentsOf: querySnapshot.documents.compactMap { document -> Offer? in
+                            
+                            try? document.data(as: Offer.self)
+                        })
+                    }
+                }
+        }
     }
     
 }

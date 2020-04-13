@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B22CBBA2444659C005965F5 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B22CBB92444659B005965F5 /* AuthenticationService.swift */; };
 		2B672020243B6160001F519C /* OfferDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B67201F243B6160001F519C /* OfferDetailsView.swift */; };
 		2B672024243B6786001F519C /* ButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672023243B6786001F519C /* ButtonView.swift */; };
 		2B672026243B778A001F519C /* ShareSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B672025243B778A001F519C /* ShareSheet.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		2B22CBB92444659B005965F5 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
 		2B67201F243B6160001F519C /* OfferDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfferDetailsView.swift; sourceTree = "<group>"; };
 		2B672023243B6786001F519C /* ButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonView.swift; sourceTree = "<group>"; };
 		2B672025243B778A001F519C /* ShareSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareSheet.swift; sourceTree = "<group>"; };
@@ -95,6 +97,14 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		2B22CBB82444654D005965F5 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2B22CBB92444659B005965F5 /* AuthenticationService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		2B67202F243B9D7F001F519C /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -137,6 +147,7 @@
 		2BDFE5E82439E95500FB574B /* NHS Offers */ = {
 			isa = PBXGroup;
 			children = (
+				2B22CBB82444654D005965F5 /* Services */,
 				2B7D7DBE243F91BF00424B4C /* NHS Offers.entitlements */,
 				2B67202F243B9D7F001F519C /* Model */,
 				2BC8166A243A5548006E8AD4 /* Utilities */,
@@ -352,6 +363,7 @@
 				2B7D7DC024406C3B00424B4C /* UIApplication.swift in Sources */,
 				2BDFE5EC2439E95500FB574B /* SceneDelegate.swift in Sources */,
 				2BDFE60F243A47C000FB574B /* OfferDetailsViewModel.swift in Sources */,
+				2B22CBBA2444659C005965F5 /* AuthenticationService.swift in Sources */,
 				2BDFE6092439F7DC00FB574B /* NameOverlay.swift in Sources */,
 				2BBDE040243F264000B952F3 /* SearchBar.swift in Sources */,
 				2BDFE6072439F6FB00FB574B /* IconView.swift in Sources */,

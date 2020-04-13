@@ -16,14 +16,24 @@ import GoogleMobileAds
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UNUserNotificationCenterDelegate, MessagingDelegate {
+    
+    @LazyInjected var authenticationService: AuthenticationService
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
-        // PN
+        
         
         FirebaseApp.configure()
         
         Fabric.with([Crashlytics.self])
+        
+        
+        // Sign In
+        
+        authenticationService.signIn()
+        
+        
+        // PN
         
         UNUserNotificationCenter.current().delegate = self
         
@@ -81,6 +91,8 @@ extension Resolver: ResolverRegistering {
   public static func registerAllServices() {
     
     register { FirestoreOfferRepository() as OfferRepository }.scope(application)
+    
+    register { AuthenticationService() }.scope(application)
     
   }
 }

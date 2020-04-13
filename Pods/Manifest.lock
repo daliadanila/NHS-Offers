@@ -169,6 +169,9 @@ PODS:
   - Fabric (1.10.2)
   - Firebase/Analytics (6.21.0):
     - Firebase/Core
+  - Firebase/Auth (6.21.0):
+    - Firebase/CoreOnly
+    - FirebaseAuth (~> 6.5.1)
   - Firebase/Core (6.21.0):
     - Firebase/CoreOnly
     - FirebaseAnalytics (= 6.4.0)
@@ -190,6 +193,12 @@ PODS:
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (= 0.3.9011)
   - FirebaseAnalyticsInterop (1.5.0)
+  - FirebaseAuth (6.5.1):
+    - FirebaseAuthInterop (~> 1.0)
+    - FirebaseCore (~> 6.6)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GTMSessionFetcher/Core (~> 1.1)
   - FirebaseAuthInterop (1.1.0)
   - FirebaseCore (6.6.5):
     - FirebaseCoreDiagnostics (~> 1.2)
@@ -282,6 +291,7 @@ PODS:
     - gRPC-Core/Interface (= 1.21.0)
     - nanopb (~> 0.3)
   - gRPC-Core/Interface (1.21.0)
+  - GTMSessionFetcher/Core (1.3.1)
   - leveldb-library (1.22)
   - nanopb (0.3.9011):
     - nanopb/decode (= 0.3.9011)
@@ -296,6 +306,7 @@ DEPENDENCIES:
   - Crashlytics (~> 3.14.0)
   - Fabric (~> 1.10.2)
   - Firebase/Analytics
+  - Firebase/Auth
   - Firebase/Firestore
   - Firebase/Messaging
   - FirebaseFirestoreSwift
@@ -323,6 +334,7 @@ SPEC REPOS:
     - Firebase
     - FirebaseAnalytics
     - FirebaseAnalyticsInterop
+    - FirebaseAuth
     - FirebaseInstallations
     - FirebaseInstanceID
     - FirebaseMessaging
@@ -330,6 +342,7 @@ SPEC REPOS:
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
+    - GTMSessionFetcher
     - PromisesObjC
     - Protobuf
     - Resolver
@@ -342,6 +355,7 @@ SPEC CHECKSUMS:
   Firebase: f378c80340dd41c0ad0914af740c021eb282a04b
   FirebaseAnalytics: a1a0b3327ceb5cd5b4bacffdb293f6c909aa087d
   FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
+  FirebaseAuth: a6da11d78dfd956b7f7af3222a0f0b1c93ef8fc9
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
   FirebaseCore: 9f495d3afacb7b558711e6218ebb14b1c51b5802
   FirebaseCoreDiagnostics: e9b4cd8ba60dee0f2d13347332e4b7898cca5b61
@@ -358,12 +372,13 @@ SPEC CHECKSUMS:
   GoogleUtilities: ad0f3b691c67909d03a3327cc205222ab8f42e0e
   "gRPC-C++": 9dfe7b44821e7b3e44aacad2af29d2c21f7cde83
   gRPC-Core: c9aef9a261a1247e881b18059b84d597293c9947
+  GTMSessionFetcher: cea130bbfe5a7edc8d06d3f0d17288c32ffe9925
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   nanopb: 18003b5e52dab79db540fe93fe9579f399bd1ccd
   PromisesObjC: c119f3cd559f50b7ae681fa59dc1acd19173b7e6
   Protobuf: 176220c526ad8bd09ab1fb40a978eac3fef665f7
   Resolver: e04ca5a9a19906f2e5cdceb2b90edd3b5daed049
 
-PODFILE CHECKSUM: d4911d584b194a8ff0b71061343b9e35f1d9a697
+PODFILE CHECKSUM: ae822994ae0a74262e1e03e2832d949654fee998
 
 COCOAPODS: 1.9.1
