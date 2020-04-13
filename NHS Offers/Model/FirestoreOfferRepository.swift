@@ -51,20 +51,13 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
     
     private func loadData() {
         
-     //   loadCollectionWithName(collectionName: "nhs")
-        
-        loadCollectionWithName(collectionName: "testCollection")
-    }
-    
-    private func loadCollectionWithName(collectionName: String) {
-        
         if listenerRegistration != nil {
             listenerRegistration?.remove()
         }
         
         listenerRegistration =
             
-            db.collection(collectionName)
+            db.collection("nhs")
             .order(by: "timestamp")
             .addSnapshotListener { (querySnapshot, error) in
                 
@@ -76,10 +69,10 @@ class FirestoreOfferRepository: BaseOfferRepository, OfferRepository, Observable
                     
                     if let querySnapshot = querySnapshot {
                         
-                        self.offers.append(contentsOf: querySnapshot.documents.compactMap { document -> Offer? in
+                        self.offers = querySnapshot.documents.compactMap { document -> Offer? in
                             
                             try? document.data(as: Offer.self)
-                        })
+                        }
                     }
                 }
         }
