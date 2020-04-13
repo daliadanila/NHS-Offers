@@ -6,10 +6,6 @@
 	<string>ca-app-pub-3940256099942544/2934735716</string>
 	<key>AdMob_AppUnitID_Live</key>
 	<string>ca-app-pub-1536345699088964/1677471924</string>
-	<key>GADApplicationIdentifier</key>
-	<string>ca-app-pub-1536345699088964~9986889558</string>
-	<key>UIUserInterfaceStyle</key>
-	<string>Light</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -25,7 +21,9 @@
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
 	<key>CFBundleVersion</key>
-	<string>1</string>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>GADApplicationIdentifier</key>
+	<string>ca-app-pub-1536345699088964~9986889558</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>UIApplicationSceneManifest</key>
@@ -66,5 +64,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
 </dict>
 </plist>
